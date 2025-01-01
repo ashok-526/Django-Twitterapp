@@ -672,7 +672,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -681,7 +681,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -690,7 +690,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -699,7 +699,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -708,16 +708,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
-        "detail": "django_blog.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATICFILES_DIRS",
-        "kind": 5,
-        "importPath": "django_blog.settings",
-        "description": "django_blog.settings",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'",
+        "peekOfCode": "STATIC_URL = '/static/'\n# if DEBUG:\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]\n# else:\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
         "detail": "django_blog.settings",
         "documentation": {}
     },

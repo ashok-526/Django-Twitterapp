@@ -118,7 +118,7 @@ STATIC_URL = '/static/'
 
 # if DEBUG:
     # During development, serve static files from the `public/static` directory
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'media')]
 # else:
     # In production, collect all static files into `staticfiles`
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
