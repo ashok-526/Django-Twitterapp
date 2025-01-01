@@ -34,3 +34,4 @@ tailwind
 tomli
 tomlkit
 wrapt
+whitenoise

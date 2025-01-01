@@ -609,7 +609,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "CRISPY_TEMPLATE_PACK = 'bootstrap4'\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "CRISPY_TEMPLATE_PACK = 'bootstrap4'\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -618,7 +618,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'django_blog.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -726,7 +726,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nSTATICFILES_STORAGE= \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -735,7 +735,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nSTATICFILES_STORAGE= \"whitenoise.storage.CompressedManifestStaticFilesStorage\"\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -744,7 +744,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nSTATICFILES_STORAGE= \"whitenoise.storage.CompressedManifestStaticFilesStorage\"\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -753,7 +753,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "CRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True",
+        "peekOfCode": "CRISPY_TEMPLATE_PACK = 'bootstrap4'\nLOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nSTATICFILES_STORAGE= \"whitenoise.storage.CompressedManifestStaticFilesStorage\"\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -762,7 +762,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'xxxxxxxxxxxxx'",
+        "peekOfCode": "LOGIN_REDIRECT_URL = 'blog-home'\nLOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nSTATICFILES_STORAGE= \"whitenoise.storage.CompressedManifestStaticFilesStorage\"\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True",
         "detail": "django_blog.settings",
         "documentation": {}
     },
@@ -771,7 +771,7 @@
         "kind": 5,
         "importPath": "django_blog.settings",
         "description": "django_blog.settings",
-        "peekOfCode": "LOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'xxxxxxxxxxxxx'\nEMAIL_HOST_PASSWORD = 'xxxxxxxxxxx'",
+        "peekOfCode": "LOGIN_URL = 'login'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nSTATICFILES_STORAGE= \"whitenoise.storage.CompressedManifestStaticFilesStorage\"\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'xxxxxxxxxxxxx'",
         "detail": "django_blog.settings",
         "documentation": {}
     },
