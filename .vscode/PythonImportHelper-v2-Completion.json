@@ -379,6 +379,14 @@
         "documentation": {}
     },
     {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
         "label": "views",
         "importPath": "users",
         "description": "users",
@@ -834,7 +842,7 @@
         "kind": 5,
         "importPath": "django_blog.urls",
         "description": "django_blog.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('blog.urls')),\n    path('register/', user_views.register, name='register'),\n    path('profile/', user_views.profile, name='profile'),\n    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),\n    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'),\n         name='password_reset'),\n    path('password-reset/done',",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('blog.urls')),\n    path('register/', user_views.register, name='register'),\n    path('profile/', user_views.profile, name='profile'),\n    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),\npath('logout/', user_views.custom_logout, name='logout'),     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'),\n         name='password_reset'),\n    path('password-reset/done',\n         auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),",
         "detail": "django_blog.urls",
         "documentation": {}
     },
@@ -934,6 +942,15 @@
         "importPath": "users.views",
         "description": "users.views",
         "peekOfCode": "def profile(request):\n    if request.method == 'POST':\n        u_form = UserUpdateForm(request.POST, instance=request.user)\n        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)\n        if u_form.is_valid() and p_form.is_valid():\n            u_form.save()\n            p_form.save()\n            messages.success(request, f'You account has been updated!')\n            return redirect('profile')\n    else:",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "custom_logout",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def custom_logout(request):\n    django_logout(request)\n    messages.success(request, 'You have been logged out.')\n    return render(request, 'users/logout.html')",
         "detail": "users.views",
         "documentation": {}
     },
